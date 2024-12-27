@@ -101,10 +101,29 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          "Home Screen Content",
-          style: TextStyle(fontSize: 20, color: Colors.white),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/weather_background.jpg'),
+            fit: BoxFit.cover,
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.3),
+              BlendMode.darken,
+            ),
+          ),
+          gradient: LinearGradient(
+            colors: [Colors.transparent, Colors.blue.withOpacity(0.7)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+
+
+        child: const Center(
+          child: Text(
+            "Home Screen Content",
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
